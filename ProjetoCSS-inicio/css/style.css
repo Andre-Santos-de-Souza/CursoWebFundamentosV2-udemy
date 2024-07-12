@@ -1,0 +1,109 @@
+@charset "UTF-8";
+*{
+    margin: 0%;
+    padding: 0%;
+    box-sizing: border-box;
+}
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ccc;
+}
+header.hero{
+    height: 100vh;
+    background-image: url('../imagens/bg-4.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center top;
+    background-attachment: fixed;
+    padding-top: 1px;
+}
+div.hero-content{
+    margin: auto;
+    min-width: 450px;
+    max-width: 700px;
+    text-align: center;
+    padding-top: 100px;
+}
+div.hero-content h1{
+    font-size: 56px;
+    text-shadow: 2px 2px 2px black;
+    color: white;
+    text-transform: uppercase;
+}
+div.hero-content p{
+    color: white;
+    background-color: rgba(0,0,0,0.7);
+    font-size: 18px;
+    display: inline-block;
+    padding: 10px;
+    border-bottom: 2px solid;
+    margin-top: 10px;
+}
+header.hero nav ul{
+    margin: 20px 50px 0px 0px;
+    text-align: right;
+}
+header.hero nav ul li{
+    display: inline-block;
+    list-style-type: none;
+    border: 1px solid white;
+    margin-left: 10px;
+}
+header.hero nav ul li a{
+    padding: 9px;
+    background-color: rgba(0,0,0,0.3);
+    display: block;
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 2px;
+    /*
+A propriedade CSS "letter-spacing" controla o espaço entre os caracteres de um elemento de texto. Quando você define letter-spacing: 2px;, está instruindo o navegador a adicionar um espaçamento adicional de 2 pixels entre cada caractere dentro do elemento que está sendo estilizado.*/
+}
+header.hero nav ul li a:hover{
+   text-decoration: underline;
+   background-color: rgba(0,0,0,0.5);
+}
+main{
+    min-width: 450px;
+    max-width: 850px;
+    margin: auto;
+}
+main section{
+    padding-top: 20px;
+}
+main section article{
+    background-color: white;
+    padding: 16px;
+    margin-bottom: 20px;
+}
+main section article h2{
+    border-bottom: 2px solid #cccccc;
+    margin-bottom: 10px;
+    background-color: #eeeeee;
+}
+main section article p{
+    text-align: justify;
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+main section article a.btn{
+    background-color: #cdc7c3;
+    display: block;
+    padding: 12px;
+    border-radius: 5px;
+    margin-left: auto;
+    width: fit-content;
+    /*se você tiver um elemento <div> com texto dentro dele, aplicar "width: fit-content;" fará com que a largura desse <div> seja ajustada para que o texto caiba sem que haja quebra de linha.*/
+}
+footer.rodape{
+   background-color: #6b6c68
+}
+footer.rodape p{
+   color: white;
+   padding: 15px;
+   text-align: center;
+   text-shadow: 2px 2px 2px black;
+   letter-spacing: 2px;
+}

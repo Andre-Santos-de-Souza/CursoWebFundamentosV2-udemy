@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+        }
+        p{
+            width: 500px;
+            background-color: #ccc;
+        }
+        p.p1{
+            padding: 25px;
+        }
+        p.p2{
+            padding: 25px;
+            border: 10px solid green;
+            box-sizing: content-box;
+            /*Quando você define box-sizing: content-box;, o navegador calcula o tamanho total de um elemento como a soma da largura e da altura do conteúdo, acrescida do preenchimento e da borda. Isso significa que, se você definir uma largura ou altura para um elemento, o preenchimento e a borda serão adicionados a essa largura ou altura para determinar o tamanho total do elemento na página.
+
+Por exemplo, se você tiver um elemento <div> com uma largura definida como 200 pixels e um preenchimento de 20 pixels, o tamanho total desse elemento será 240 pixels (200 pixels de largura do conteúdo + 20 pixels de preenchimento à esquerda + 20 pixels de preenchimento à direita).*/
+        }
+        p.p4{
+            padding: 25px;
+            border: 10px solid green;
+            box-sizing: border-box;
+/*A propriedade box-sizing: border-box; é uma regra de estilo do CSS que afeta o modelo de caixa de um elemento HTML. Normalmente, quando você define as dimensões (largura e altura) de um elemento HTML, o navegador calcula essas dimensões incluindo o conteúdo, o preenchimento (padding) e a borda (border) do elemento.
+
+No entanto, ao usar box-sizing: border-box;, você está alterando esse comportamento padrão. Com essa regra, o navegador agora calcula as dimensões do elemento de forma diferente. Em vez de adicionar o preenchimento e a borda às dimensões especificadas, ele os inclui no valor especificado para largura e altura.
+
+Isso significa que, se você definir a largura de um elemento como 100 pixels e adicionar um preenchimento de 10 pixels e uma borda de 5 pixels, o elemento ainda terá 100 pixels de largura total. O navegador ajustará automaticamente o tamanho do conteúdo para se encaixar dentro dessas dimensões, mantendo a largura total do elemento consistente.*/
+            margin-bottom: 250px;
+        }
+    </style>
+</head>
+<body>
+    <h1>Box sizing</h1>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum porro aperiam modi consequatur consequuntur nemo quam blanditiis cum voluptates odit quos eum saepe ab quibusdam eius laborum obcaecati, vitae omnis alias dolorem aut sequi nostrum. Facilis accusamus sint incidunt officiis, eius natus fugit. Pariatur minus quasi animi maiores tempore nobis rerum nisi hic velit reprehenderit distinctio quo perferendis culpa ea, asperiores suscipit soluta deleniti voluptates. Soluta nihil doloremque eligendi quis quasi corporis iste amet mollitia numquam maiores, maxime, dolore recusandae odit magnam fuga labore quibusdam, nesciunt ab libero vel necessitatibus accusamus enim suscipit. Praesentium id veritatis neque tempore et nisi!</p>
+    <p class="p1">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum porro aperiam modi consequatur consequuntur nemo quam blanditiis cum voluptates odit quos eum saepe ab quibusdam eius laborum obcaecati, vitae omnis alias dolorem aut sequi nostrum. Facilis accusamus sint incidunt officiis, eius natus fugit. Pariatur minus quasi animi maiores tempore nobis rerum nisi hic velit reprehenderit distinctio quo perferendis culpa ea, asperiores suscipit soluta deleniti voluptates. Soluta nihil doloremque eligendi quis quasi corporis iste amet mollitia numquam maiores, maxime, dolore recusandae odit magnam fuga labore quibusdam, nesciunt ab libero vel necessitatibus accusamus enim suscipit. Praesentium id veritatis neque tempore et nisi!</p>
+    <p class="p2">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum porro aperiam modi consequatur consequuntur nemo quam blanditiis cum voluptates odit quos eum saepe ab quibusdam eius laborum obcaecati, vitae omnis alias dolorem aut sequi nostrum. Facilis accusamus sint incidunt officiis, eius natus fugit. Pariatur minus quasi animi maiores tempore nobis rerum nisi hic velit reprehenderit distinctio quo perferendis culpa ea, asperiores suscipit soluta deleniti voluptates. Soluta nihil doloremque eligendi quis quasi corporis iste amet mollitia numquam maiores, maxime, dolore recusandae odit magnam fuga labore quibusdam, nesciunt ab libero vel necessitatibus accusamus enim suscipit. Praesentium id veritatis neque tempore et nisi!</p>
+   
+    <p class="p4">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Voluptatum porro aperiam modi consequatur consequuntur nemo quam blanditiis cum voluptates odit quos eum saepe ab quibusdam eius laborum obcaecati, vitae omnis alias dolorem aut sequi nostrum. Facilis accusamus sint incidunt officiis, eius natus fugit. Pariatur minus quasi animi maiores tempore nobis rerum nisi hic velit reprehenderit distinctio quo perferendis culpa ea, asperiores suscipit soluta deleniti voluptates. Soluta nihil doloremque eligendi quis quasi corporis iste amet mollitia numquam maiores, maxime, dolore recusandae odit magnam fuga labore quibusdam, nesciunt ab libero vel necessitatibus accusamus enim suscipit. Praesentium id veritatis neque tempore et nisi!</p>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Box Shadow</title>
+    <style>
+        div{
+            background-color: orange;
+            width: 200px;
+            height: 200px;
+            margin: 100px auto;
+            border-radius: 50px / 20px;/*(horizontal) / (vertical)*/
+            border-radius: 50px 20px 0 80px / 100px 50px 0 20px;/*forma de elipse -> (horizontal) / (vertical)*/
+
+            box-shadow: 20px 0px 0px 0px black, 10px 20px 10px red, -10px 5px 5px blue, 0px -10px 10px 5px green;/*(horizontal) (vertical) (blur radius) (spread radius) (color)*/
+        }
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

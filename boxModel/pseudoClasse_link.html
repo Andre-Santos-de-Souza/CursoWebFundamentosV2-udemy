@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            color: red;
+        }
+        a{
+            display: inline-block;
+            padding: 5px;
+        }
+        a:link{
+            /*a:link: Isso se refere aos links que ainda não foram visitados. Em outras palavras, são os links que o usuário ainda não clicou.*/
+            color: red;
+        }
+        a:visited{
+            /*a:visited: Esta parte da regra se refere aos links que já foram acessados pelo usuário. Isso significa que se um usuário clicou no link e visitou a página associada, esse link será considerado "visitado".*/
+           color: green;
+        }
+        a:hover{
+            /*a:hover: Esta parte da regra se refere ao estado do link quando o cursor do mouse está sobre ele. É uma forma de interação do usuário com o link.*/
+            background-color: #ccc;  
+        }
+        a:active{
+            /*a:active: Esta parte da regra se refere ao estado do link quando ele está sendo clicado pelo usuário, antes que o clique seja liberado. É o momento em que o usuário está interagindo ativamente com o link.*/
+            background-color: yellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Links</h1>
+
+    <a href="display.html" target="_self">Display</a> | <a href="boxModel.html" target="_self">Box Model</a> | <a href="#">Página inexistente</a>
+
+    <p>
+        Veja mais exemplos ade box sizing aqui: <a href="box_sizing.html" target="_self">Box Sizing</a>
+    </p>
+</body>
+</html>

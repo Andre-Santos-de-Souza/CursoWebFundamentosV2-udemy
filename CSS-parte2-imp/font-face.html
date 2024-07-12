@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Font-face</title>
+    <style>
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;900&display=swap');
+
+        @font-face {
+            /*Vídeo 86 do curso
+            Sites para baixar fontes -> dafont.com, fontsquirrel.com(esse site pode gerar outros formatos de fonte)*/
+            font-family: 'nadia';
+            src: local("Nadia Serif"), 
+            local("Nadia-Serif"), 
+            url('fonts/nadia/nadia-serif.ttf') format('truetype'),
+            url('fonts/nadia/nadia-serif.woff') format('woff'),
+            url('fonts/nadia/nadia-serif.svg') format('svg');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        @font-face {
+            font-family: 'chunk';
+            src: url('fonts/chunkfive_ex2/chunkfive_ex-webfont.woff') format('woff'), 
+            url('fonts/chunkfive_ex2/chunkfive_ex-webfont.woff2') format('woff2'),
+            url('fonts/chunkfive_ex/Chunkfive\ Ex.ttf') format('truetype');
+            font-weight: normal;
+            font-style: normal;
+        }
+
+        h1{
+            font-family: 'chunk';
+        }
+        p{
+            font-family: "Roboto", sans-serif;
+            line-height: 2;
+        }
+    </style>
+</head>
+<body>
+    <h1>Font-face</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis quaerat ut non ipsa magni voluptatem, suscipit nemo, quibusdam quis eaque in quas facilis earum deserunt repellat eligendi mollitia excepturi vel?</p>
+</body>
+</html>

@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition</title>
+    <style>
+        div{
+            --anima:cubic-bezier(.59,-0.3,.49,1.36);
+
+            background-color: orange;
+            width: 200px;
+            height: 150px;
+            margin: 100px;
+            transition-property: width, height, background-color;
+            /*transition-property é uma propriedade CSS que especifica quais propriedades CSS devem ser animadas durante uma transição. */
+            transition-duration: .5s,1s;
+            /*A propriedade CSS transition-duration define a duração de uma transição CSS.*/
+            transition-timing-function: cubic-bezier(.59,-0.3,.49,1.36);
+            /*
+A propriedade CSS transition-timing-function determina como a transição CSS deve progredir ao longo do tempo, ou seja, ela controla a velocidade de mudança das propriedades durante uma transição.
+
+Existem vários valores que você pode atribuir a essa propriedade para definir diferentes efeitos de transição:
+
+ease: A transição começa devagar, acelera no meio e desacelera novamente no final. Este é o valor padrão se não especificado.
+linear: A transição ocorre em uma velocidade constante de início ao fim.
+ease-in: A transição começa devagar e acelera à medida que avança.
+ease-out: A transição começa rapidamente e desacelera à medida que avança.
+ease-in-out: A transição começa devagar, acelera no meio e desacelera novamente no final, assim como ease, mas com uma mudança mais suave na velocidade.*/
+            transition-delay: 0s, .9s;
+            /*A propriedade CSS transition-delay determina o tempo que uma transição deve esperar antes de começar. Isso significa que você pode adicionar um atraso à transição de propriedades CSS após a mudança de estado ter ocorrido.*/
+
+            /* transition:  property(all) duration(0s) function(ease) delay(0s); */
+            transition: width .5s var(--anima), height 1s var(--anima) .3s, background-color .5s var(--anima);
+        }
+        div:hover{
+            width: 400px;
+            height: 300px;
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div></div>
+</body>
+</html>

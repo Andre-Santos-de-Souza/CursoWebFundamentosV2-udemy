@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit content</title>
+    <style>
+        body{
+            margin-bottom: 500px;
+        }
+        .container{
+            border: 2px solid black;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;
+            height: 300px;
+            background-color: rgba(233,0,0,.5);
+        }
+        .item{
+            background-color: blueviolet;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .fit-content .item{
+            width: fit-content;
+        }
+        .min-content .item{
+            width: min-content;
+        }
+        .max-content .item{
+            width: max-content;
+        }
+        .overflow-hidden{
+            overflow: hidden;
+            /*A propriedade overflow define como o conteúdo que excede as dimensões do elemento deve ser tratado. Nesse caso, ao definir overflow: hidden;, estamos dizendo que qualquer conteúdo que ultrapasse as dimensões do elemento deve ser cortado (ou escondido), não sendo exibido além dos limites do elemento.*/
+        }
+        .overflow-scroll{
+            overflow: scroll;
+            /*Ao definir overflow: scroll;, estamos indicando que o elemento deve sempre exibir barras de rolagem, mesmo que o conteúdo dentro dele não ultrapasse as dimensões do elemento. Se o conteúdo exceder essas dimensões, as barras de rolagem serão exibidas para permitir ao usuário rolar e visualizar o conteúdo oculto.*/
+        }
+        .overflow-auto{
+           overflow: auto;
+           /*Ao definir overflow: auto;, estamos especificando que o navegador deve adicionar barras de rolagem ao elemento somente quando necessário. Se o conteúdo dentro do elemento não exceder suas dimensões, nenhuma barra de rolagem será exibida. No entanto, se o conteúdo exceder as dimensões do elemento, as barras de rolagem serão automaticamente adicionadas para permitir ao usuário rolar e visualizar o conteúdo oculto.*/
+        }
+        .overflow-x-hidden{
+            overflow-x: hidden;
+            /*A propriedade overflow-x é específica para controlar o transbordamento de conteúdo na direção horizontal (eixo x). Ao definir overflow-x: hidden;, estamos indicando que qualquer conteúdo que exceda as dimensões horizontais do elemento deve ser cortado (ou escondido), sem exibição de barras de rolagem horizontais.*/
+        }
+        .overflow-y-hidden{
+            overflow-y: hidden;
+            /*Ao aplicar essa classe a um elemento, a propriedade overflow-y é definida como hidden. Isso significa que qualquer conteúdo que exceda as dimensões verticais do elemento será ocultado. Não haverá barras de rolagem verticais visíveis para permitir que o usuário role verticalmente para ver o conteúdo que ultrapassou as dimensões do elemento.*/
+        }
+        .overflow-x-scroll{
+            overflow-x: scroll;
+            /*Ao aplicar essa classe a um elemento, a propriedade overflow-x é definida como scroll. Isso significa que barras de rolagem horizontais serão sempre visíveis no elemento, independentemente do tamanho do conteúdo. Mesmo que o conteúdo dentro do elemento não exceda suas dimensões horizontais, as barras de rolagem horizontais serão mostradas para permitir que o usuário role horizontalmente e veja qualquer conteúdo que ultrapasse as dimensões do elemento.*/
+        }
+        .overflow-y-scroll{
+            overflow-y: scroll;
+            /*Ao aplicar essa classe a um elemento, a propriedade overflow-y é definida como scroll. Isso significa que barras de rolagem verticais serão sempre visíveis no elemento, independentemente do tamanho do conteúdo. Mesmo que o conteúdo dentro do elemento não exceda suas dimensões verticais, as barras de rolagem verticais serão mostradas para permitir que o usuário role verticalmente e veja qualquer conteúdo que ultrapasse as dimensões do elemento.*/
+        }
+        .overflow-x-auto{
+            overflow-x: auto;
+            /*Ao aplicar essa classe a um elemento, estamos definindo a propriedade overflow-x como auto. Isso indica que o navegador decidirá se as barras de rolagem horizontais devem ser exibidas com base no conteúdo do elemento. Se o conteúdo exceder as dimensões horizontais do elemento, o navegador automaticamente adicionará barras de rolagem horizontais para permitir que o usuário role horizontalmente e veja o conteúdo oculto.*/
+        }
+        .overflow-y-auto{
+            overflow-y: auto;
+            /*Ao aplicar essa classe a um elemento, a propriedade overflow-y é definida como auto. Isso significa que o navegador decidirá automaticamente se as barras de rolagem verticais devem ser exibidas com base no conteúdo do elemento. Se o conteúdo exceder as dimensões verticais do elemento, o navegador adicionará barras de rolagem verticais para permitir que o usuário role verticalmente e veja o conteúdo oculto.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container fit-content overflow-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container min-content overflow-auto">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container max-content overflow-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+    
+    <div class="container max-content overflow-x-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container max-content overflow-y-hidden">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container min-content overflow-x-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container min-content overflow-y-scroll">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container fit-content overflow-x-auto">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+
+    <div class="container max-content overflow-y-auto">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+</body>
+</html>

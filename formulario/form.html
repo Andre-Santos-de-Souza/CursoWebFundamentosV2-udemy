@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário</title>
+    <style>
+        body{
+            padding-bottom: 100vh;
+        }
+    </style>
+</head>
+<body>
+    <form action="" method="get">
+        <fieldset>
+            <legend>Introdução</legend>
+
+            <label for="idEmail">Email</label>
+            <input type="email" name="email" id="idEmail" required maxlength="20" placeholder="Digite um email válido" autofocus>
+            <br><br>
+
+            <label for="filhos">Quantidade de filhos</label>
+            <input type="number" name="number" id="filhos" min="0" max="1000" >  
+            <br><br>
+
+            <label for="idDate">Data </label>
+            <input type="date" name="date" id="idDate" min="2022-01-15" max="2022-12-15">
+            <br><br>
+
+            Possui atividade extra?
+            <input type="radio" name="atividadeExtra" id="idSim" value="sim"><label for="idSim">Sim</label>
+            
+            <input type="radio" name="atividadeExtra" id="idNao" value="nao"><label for="idNao">Não</label>
+
+        </fieldset>
+
+        <fieldset>
+            <legend>Área de interesse</legend>
+            <input type="checkbox" name="interesse" id="id-html" value="html" checked><label for="id-html">HTML</label>
+
+            <input type="checkbox" name="interesse" id="id-css" value="css"><label for="id-css">CSS</label>
+
+            <input type="checkbox" name="interesse" id="id-js" value="Js"><label for="id-js">JavaScrpt</label>
+
+            <input type="checkbox" name="interesse" id="id-python" value="python"><label for="id-python">Python</label>
+
+            <input type="checkbox" name="interesse" id="id-java" value="java"><label for="id-java">Java</label>
+
+            <br> <br>
+            <label for="idEscolha">Escolha uma linguagem</label>
+            <select name="linguagem" id="idEscolha" required multiple size="7">
+                <option value="">Selecione uma</option>
+
+                <optgroup label="frontend">
+                    <option value="html">HTML</option>
+                    <option value="css">CSS</option>
+                    <option value="js">JavaScrpt</option>
+                </optgroup>
+
+                <optgroup label="backend">
+                    <option value="python">Python</option>
+                    <option value="java">Java</option>
+                </optgroup>
+
+            </select>
+            <br><br>
+
+            <label for="escolhaLing">Escolha uma linguagem</label>
+            <input type="text" list="linguagemList" id="escolhaLing">
+                <datalist id="linguagemList">
+                     <option value="html">
+                     <option value="css">
+                     <option value="js">
+                     <option value="Python">
+                     <option value="Java">
+                </datalist>
+        </fieldset>
+
+        <fieldset>
+            <legend>Mensagem</legend>
+            <textarea name="mensagem" id="idMensagem" cols="50" rows="8" style="resize: none;" maxlength="255" readonly></textarea>
+
+            <br><br>
+            <textarea cols="50" rows="8" disabled>
+Contrato de utilização
+    1.1 regra 1
+
+    1.2 regra 2
+            </textarea>
+            <label>
+                <input type="checkbox" name="" id="">Li e aceito o Contrato
+            </label>
+            <br><br>
+
+            <input type="file" name="" id="">
+        </fieldset>
+
+        <input type="hidden" name="hidden" value="abcdef1234">
+
+        <br><br>
+            <input type="submit" value="Enviar">
+            <input type="button" value="button">
+            <button type="submit"><em>Mandar com tag button</em></button>
+            <button type="button">Botão</button>
+
+            <input type="search">
+            <br><br>
+
+            <input type="range" min="0" max="10" step=".5">
+            <br><br>
+
+            <input type="time" name="" id="">
+            <br><br>
+
+            <input type="color" name="" id="">
+    </form>
+</body>
+</html>

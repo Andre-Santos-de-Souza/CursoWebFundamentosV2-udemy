@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Position</title>
+    <style>
+        #div1{
+          background-color: rgba(255,0,0,.5);
+          padding: 10px;
+          width: 90%;
+          position: sticky;
+          /*Quando você aplica position: sticky; a um elemento, ele age como um híbrido entre position: relative; e position: fixed;. Isso significa que ele se comporta como um elemento posicionado normalmente até que seja rolado para fora da visualização, momento em que ele "gruda" na posição especificada. Quando a página é rolada de volta, ele retorna à sua posição original.
+
+Essa propriedade é frequentemente usada em barras de navegação, cabeçalhos de tabelas ou qualquer outro elemento que você queira manter visível enquanto o usuário rola o conteúdo da página.*/
+          height: 200px;
+          top: 0;
+          bottom: 0;
+        }
+        #div2{
+            background-color: rgba(0,255,0,.5);
+            padding: 10px;
+            width: 80%;
+            height: 50px;
+            position: relative;
+            /*A propriedade position: relative; no CSS define um elemento como posicionado de maneira relativa em relação à sua posição original no layout normal da página. Quando você aplica position: relative; a um elemento, ele é deslocado de sua posição normal, mas ainda ocupa espaço no layout conforme ele teria ocupado se não fosse deslocado.
+
+Quando você usa position: relative;, você pode mover o elemento usando as propriedades top, bottom, left e right. Esses valores definem o deslocamento do elemento em relação à sua posição original.*/
+        }
+        #div3{
+           background-color: rgba(0,0,255,.5);
+          padding: 10px;
+          width: 30px;
+          height: 30px;
+          position: absolute;
+          /*
+A propriedade position: absolute; no CSS é usada para posicionar um elemento em relação ao seu contêiner pai mais próximo que tenha uma posição definida (ou seja, que não seja position: static;). Quando você aplica position: absolute; a um elemento, ele é removido do fluxo normal do layout e posicionado com base nas coordenadas especificadas, ignorando o posicionamento de outros elementos.
+
+As coordenadas são definidas usando as propriedades top, bottom, left e right. Essas propriedades determinam a distância do elemento em relação às bordas do contêiner pai posicionado mais próximo.
+
+Uma característica importante do position: absolute; é que o elemento posicionado dessa forma não ocupa espaço no layout, ou seja, outros elementos não são afetados pela sua presença.*/
+        }
+        #div4{
+           background-color: rgb(9, 199, 247);
+          padding: 10px;
+          width: 10px;
+          height: 10px;
+          position: fixed;
+          /*A propriedade position: fixed; no CSS é usada para posicionar um elemento de forma fixa na janela de visualização do navegador, independentemente de rolar a página. Quando você aplica position: fixed; a um elemento, ele é removido do fluxo normal do layout e posicionado em relação à janela de visualização, não ao contêiner pai.
+
+Essa propriedade é útil quando você deseja que um elemento permaneça visível na tela, mesmo quando o usuário rolar o conteúdo da página. Um exemplo comum de uso é para barras de navegação ou botões de ação que devem estar sempre acessíveis, independentemente de onde o usuário esteja na página.*/
+          top: 100px;
+        }
+    </style>
+</head>
+<body>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</p>
+
+    <div id="div1">
+        1
+        <div id="div2">
+            2
+            <div id="div3">3
+                <div id="div4">4</div>
+            </div>
+        </div>
+    </div>
+
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+    <P>Lorem ipsum dolor sit amet consectetur adipisicing elit. Velit laudantium vel in itaque, delectus id neque veritatis nostrum, consectetur aliquam repudiandae obcaecati doloribus reprehenderit dolore minus? Facere quasi explicabo laborum?</P>
+</body>
+</html>

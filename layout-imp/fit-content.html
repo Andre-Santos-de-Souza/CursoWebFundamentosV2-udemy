@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fit content</title>
+    <style>
+        .container{
+            border: 2px solid black;
+            padding: 16px;
+            width: 300px;
+            margin-bottom: 16px;
+        }
+        .item{
+            background-color: blueviolet;
+            margin-bottom: 10px;
+            padding: 5px;
+        }
+        .fit-content .item{
+            width: fit-content;
+            /*Quando você define width: fit-content;, o navegador irá calcular a largura mínima necessária para acomodar todo o conteúdo dentro do elemento e definirá a largura do elemento como essa largura mínima. Se houver margens, preenchimentos ou bordas aplicados ao elemento, o navegador também levará esses valores em consideração ao calcular a largura mínima.
+
+É importante observar que o suporte para fit-content pode variar entre navegadores e pode não funcionar da mesma forma em todos eles. */
+        }
+        .min-content .item{
+            width: min-content;
+            /*Quando você aplica width: min-content; a um elemento HTML, o navegador calculará a largura mínima necessária para que o conteúdo dentro desse elemento seja exibido sem quebrar linhas. Isso significa que o elemento terá a menor largura possível que ainda permite que todo o seu conteúdo seja mostrado em uma única linha.*/
+        }
+        .max-content .item{
+            width: max-content;
+            /*Quando você aplica width: max-content; a um elemento HTML, o navegador calcula a largura máxima necessária para acomodar todo o conteúdo dentro desse elemento sem quebrar linhas. Isso significa que o elemento terá a maior largura possível que ainda permite que todo o seu conteúdo seja mostrado em uma única linha.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="container fit-content">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+    <div class="container min-content">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+    <div class="container max-content">
+        <div class="item">lorem</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quaerat, esse.</div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officiis iusto dicta, ad tempore, necessitatibus laboriosam nesciunt corporis a, praesentium amet explicabo expedita qui magnam corrupti.</div>
+        <div class="item">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Earum, totam ratione hic tenetur eveniet in id quod placeat aliquam recusandae sit provident enim vero distinctio ipsam possimus ipsa temporibus harum corrupti! Iste consequatur cum aut accusamus deserunt laboriosam dignissimos, minima ducimus? Itaque iusto, exercitationem officiis error, illum vero eum aliquid, maxime eaque iste ullam. Quos, saepe repellendus. Nesciunt aliquam maiores recusandae, voluptas illum incidunt quos quasi! Laborum veniam ipsum, quam earum vel dolorem voluptatibus repellendus.</div>
+    </div>
+</body>
+</html>
