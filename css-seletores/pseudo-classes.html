@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-classes</title>
+    <style>
+        button{
+            background-color: rgb(122,121,121);
+            color: white;
+            border: none;
+            padding: 1em;
+            margin-bottom: .5em;
+        }
+        button:disabled{
+            opacity: .5;
+        }
+        p:empty::before{
+            content: "parágrafo vazio ???";
+        }
+        a:focus, a:hover{
+            background-color: yellow;
+        }
+        input[type="text"]:read-write{
+            background-color: #999;
+            border: none;
+            padding: .5em;
+        }
+        input[type="text"]:read-only{
+            background-color: yellow;
+        }
+        input[type="text"]:disabled{
+            background-color: white;
+        }
+        input[type="text"]:read-only:not(:disabled){
+            background-color: yellow;
+        }
+        input[type="text"]::placeholder{
+            color: white;
+        }
+        input[type="text"]:placeholder-shown{
+            background-color: aqua;
+        }
+        p:only-child{
+            background-color: orangered;
+        }
+        p:read-write{
+            border-bottom: 2px solid red;
+        }
+        div:target{
+            border: 4px dashed red;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <a href="#titulo">vai para o título</a>
+        <br>
+        <button>Vai</button><br>
+        <button disabled>Vai disabled</button>
+    </div>
+
+    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Expedita aut assumenda sit asperiores dolorum modi minima? Eaque a alias nesciunt praesentium minus dolore, in, facere quod saepe laudantium, deleniti autem!</p>
+    <p></p>
+    <p></p>
+
+    <ul>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+        <li><a href="#">link falso</a></li>
+    </ul>
+
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+    <p tabindex="0">Lorem ipsum dolor sit amet.</p>
+
+    <form action="#">
+        <input type="text" value="Valor inicial"><br><br>
+        <input type="text" value="Valor" disabled><br><br>
+        <input type="text" value="Valor" readonly><br><br>
+        <input type="text" placeholder="placeholder"><br><br>
+    </form>
+
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+    </div>
+    <div>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+        <p contenteditable>parágrafo editável</p>
+    </div>
+
+    <div id="titulo">
+        <h1>titulo</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum cumque a, aut id sunt nesciunt totam possimus expedita quod hic impedit eveniet quae itaque, perferendis eaque, dolorem deserunt reprehenderit ipsam?</p>
+        <a href="#top">vai para cima</a>
+    </div>
+    
+</body>
+</html>
