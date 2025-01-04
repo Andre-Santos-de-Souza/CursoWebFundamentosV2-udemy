@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flexbox{
+            height: 250px;
+            border: 3px solid red;
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .flexbox div{
+            border: 2px solid orange;
+            width: 300px;
+            margin: 15px;
+        }
+        .flex-container1{
+            /* flex-wrap: wrap;
+            flex-direction: row; */
+            flex-flow: wrap row;
+        }
+        .flex-container2{
+            justify-content: space-around;
+            /*A propriedade justify-content no CSS é usada para alinhar os itens de um contêiner flexível ao longo de seu eixo principal (geralmente horizontal). Ela controla como o espaço é distribuído entre e ao redor dos itens.
+            Valores mais comuns:
+            flex-start: Alinha os itens ao início do contêiner.
+            flex-end: Alinha os itens ao final do contêiner.
+            center: Centraliza os itens no contêiner.
+            space-between: Distribui os itens com espaços iguais entre eles.
+            space-around: Distribui os itens com espaços iguais ao redor de cada item.
+            space-evenly: Distribui os itens com espaços uniformes entre eles e nas bordas.*/
+        }
+        .flex-container2 div{
+            width: 30px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox flex-container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+</body>
+</html>

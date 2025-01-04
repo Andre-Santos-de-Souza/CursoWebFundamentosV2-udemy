@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox</title>
+    <style>
+        .flexbox{
+            height: 250px;
+            border: 3px solid red;
+            display: flex;
+            margin-bottom: 16px;
+        }
+        .flexbox div{
+            border: 2px solid orange;
+            width: 300px;
+            margin: 15px;
+        }
+        .flex-container1{
+            /* flex-wrap: wrap;
+            flex-direction: row; */
+            flex-flow: wrap row;
+        }
+        .flex-container2{
+            justify-content: space-around;
+        }
+        .flex-container2 div{
+            width: 30px;
+            margin: 0;
+        }
+        .flex-container3{
+            justify-content: space-around;
+            align-items: center;
+            /*A propriedade align-items no CSS é usada para alinhar os itens dentro de um contêiner flexível (flexbox) ou de grade (grid) ao longo do eixo transversal (normalmente o eixo vertical, dependendo da direção do layout).
+            Valores comuns:
+            stretch (padrão): Os itens são esticados para preencher o contêiner no eixo transversal.
+            flex-start: Os itens são alinhados ao início do eixo transversal.
+            flex-end: Os itens são alinhados ao final do eixo transversal.
+            center: Os itens são centralizados no eixo transversal.
+            baseline: Os itens são alinhados com suas linhas de base de texto.*/
+        }
+        .flex-container3 div{
+            width: 30px;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="flexbox flex-container1">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container2">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+
+    <div class="flexbox flex-container3">
+        <div class="div1">1</div>
+        <div class="div2">2</div>
+        <div class="div3">3</div>
+        <div class="div4">4</div>
+    </div>
+</body>
+</html>
