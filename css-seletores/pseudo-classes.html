@@ -13,20 +13,34 @@
             margin-bottom: .5em;
         }
         button:disabled{
+            /*
+            O :disabled é um seletor pseudo-classe em CSS usado para selecionar elementos que estão desabilitados, como botões (<button>), campos de entrada (<input>), caixas de seleção (<input type="checkbox">), entre outros, que estão no estado desabilitado no HTML.
+            Quando você aplica o :disabled a um elemento, você pode personalizar sua aparência ou comportamento quando ele estiver desabilitado.
+            Isso significa que, quando um botão estiver desabilitado (por exemplo, com o atributo disabled no HTML), sua opacidade será reduzida para 50% (valor de 0.5), tornando o botão visualmente mais "desaparecido" ou "atenuado", indicando ao usuário que ele não pode interagir com aquele botão.*/
             opacity: .5;
         }
         p:empty::before{
+            /*No CSS, o pseudo-seletor :empty é usado para selecionar elementos que não têm conteúdo ou não contêm filhos, ou seja, elementos que estão "vazios". Ele verifica se o conteúdo de um elemento é vazio, o que significa que não há texto ou elementos filhos dentro dele.
+            O seletor p:empty seleciona qualquer elemento <p> que não tenha conteúdo interno (sem texto ou filhos). Quando esse parágrafo estiver vazio, o ::before adicionará o texto "parágrafo vazio ???" antes do conteúdo (caso o parágrafo tenha algo dentro, essa regra não será aplicada).
+            */
             content: "parágrafo vazio ???";
         }
         a:focus, a:hover{
+            /*O :focus é um seletor de pseudoclasse no CSS utilizado para aplicar estilos a um elemento que está em foco. Isso acontece quando o usuário interage com um elemento que pode receber foco, como um campo de formulário (input, textarea), links (<a>), botões ou outros elementos interativos. O foco pode ser alcançado por meio de navegação por teclado (como pressionando a tecla Tab) ou clique do mouse.
+            Esse código fará com que o fundo de um link (<a>) fique amarelo quando ele estiver em foco, como após o usuário clicar ou navegar até ele com o teclado.*/
             background-color: yellow;
         }
         input[type="text"]:read-write{
+            /*O seletor :read-write em CSS é uma pseudo-classe que se aplica a campos de entrada de texto (<input type="text">) ou áreas de texto (<textarea>) que estão em um estado de "leitura e escrita", ou seja, que o usuário pode editar.
+            Esse estilo será aplicado a um campo de texto (input[type="text"]) que está em um estado em que o usuário pode interagir com ele, ou seja, quando ele é "editável". O campo de texto terá um fundo cinza (#999), sem borda (border: none), e com um espaçamento interno de 0,5em (padding: .5em).*/
             background-color: #999;
             border: none;
             padding: .5em;
         }
         input[type="text"]:read-only{
+            /*
+        O seletor :read-only em CSS é utilizado para aplicar estilos a elementos de formulário, como campos de entrada (<input>, <textarea>), que estão em um estado somente leitura. Ou seja, ele é usado para identificar e estilizar campos em que o usuário não pode alterar o conteúdo.
+        Esse código aplica um fundo amarelo (background-color: yellow;) a todos os campos de entrada de texto (<input type="text">) que estão no estado somente leitura. Isso pode ser útil para indicar visualmente ao usuário que ele não pode interagir com aquele campo, embora o conteúdo esteja visível.*/
             background-color: yellow;
         }
         input[type="text"]:disabled{
@@ -36,18 +50,26 @@
             background-color: yellow;
         }
         input[type="text"]::placeholder{
+            /*O ::placeholder é um pseudo-elemento em CSS utilizado para estilizar o texto que aparece como placeholder dentro de um campo de entrada (<input>) ou área de texto (<textarea>). O texto do placeholder é uma dica ou instrução que é exibida no campo até que o usuário comece a digitar.
+            Este código define que o texto do placeholder em um campo de texto (<input type="text">) será exibido na cor branca. O seletor input[type="text"] garante que a regra se aplique apenas aos campos de texto (não outros tipos de input). O pseudo-elemento ::placeholder então seleciona o texto do placeholder para ser estilizado.*/
             color: white;
         }
         input[type="text"]:placeholder-shown{
+            /*O pseudo-classe :placeholder-shown em CSS é usada para selecionar elementos <input> ou <textarea> quando o texto de placeholder (o texto que aparece como dica dentro do campo, geralmente antes de o usuário digitar algo) está visível.
+            O código seleciona os campos <input> do tipo texto (input[type="text"]) que exibem um placeholder (ou seja, que ainda não têm texto digitado pelo usuário). Quando o placeholder está visível, o fundo do campo de entrada é alterado para a cor aqua.*/
             background-color: aqua;
         }
         p:only-child{
+            /*O seletor :only-child em CSS é utilizado para selecionar um elemento que é o único filho de seu elemento pai. Ou seja, ele aplica o estilo apenas ao elemento que não tem irmãos, ou seja, é o único dentro do seu contêiner.
+            Este código aplica o fundo laranja-avermelhado (orangered) ao elemento <p> somente se ele for o único filho dentro de seu elemento pai. Se houver outros elementos (como outros <p>, ou qualquer outro tipo de elemento) ao lado deste <p>, o estilo não será aplicado.*/
             background-color: orangered;
         }
         p:read-write{
             border-bottom: 2px solid red;
         }
         div:target{
+            /*O pseudo-classe :target em CSS é usada para aplicar estilos a um elemento que corresponde ao fragmento de URL (hash) da página. Ou seja, quando um link é clicado e a URL da página muda para incluir um #id, o :target permite que você aplique estilos ao elemento com esse ID.
+            O estilo será aplicado a qualquer <div> que tenha um ID correspondente ao fragmento de URL da página. Por exemplo, se a URL for algo como example.com/#section1 e houver uma <div id="section1">, a borda vermelha será aplicada a essa <div>.*/
             border: 4px dashed red;
         }
     </style>

@@ -11,6 +11,7 @@ a[href$=".pdf"]::before {
     margin-right: 0.5em;
 }
 input[type="checkbox"]:checked + label{
+    /*O pseudo-classe :checked no CSS é usada para selecionar elementos de entrada (como <input>) que estão marcados ou selecionados. Ela funciona em elementos do tipo checkbox, radio, e, em alguns casos, option (de <select>).*/
     color: green;
 }
 input[type="checkbox"]:not(:disabled)+ label{

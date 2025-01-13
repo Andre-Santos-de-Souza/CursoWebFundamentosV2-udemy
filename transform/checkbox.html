@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkbox</title>
+    <style>
+        .chk1{
+            display: none;
+        }
+        .chk1+ label span{
+            display: inline-block;
+            font-size: 26px;
+            width: 1em;
+            height: 1em;
+            background-color: red;
+        }
+        .chk1:checked + label span{
+            background-color: blue;
+            position: relative;
+        }
+        .chk1:checked + label span::before{
+            content: "";
+            display: block;
+            border: 2px solid white;
+            position: absolute;
+            /*
+            O position: absolute; em CSS posiciona um elemento de forma absoluta em relação ao seu elemento pai mais próximo que tenha position: relative;, absolute;, fixed; ou sticky;. Se não houver tal elemento, ele será posicionado em relação ao elemento body.
+            Quando um elemento tem position: absolute;, ele é retirado do fluxo normal do layout, ou seja, não afeta o posicionamento de outros elementos na página. Pode ser posicionado usando as propriedades top, right, bottom e left.*/
+            top: .077em;
+            left: .38em;
+            right: .3em;
+            bottom: .3em;
+            transform: rotate(30deg);
+            border-left-color: transparent;
+            border-top-color: transparent;
+        }
+        
+        .lbl2 span{
+            display: inline-block;
+            font-size: 26px;
+            width: 1em;
+            height: 1em;
+            background-color: red;
+            position: relative;
+            transition: background-color .2s;
+        }
+        .lbl2 input[type="checkbox"]:checked + span{
+            background-color: blue;
+        }
+        .lbl2 input[type="checkbox"] + span::before{
+            content: "";
+            display: block;
+            border: 2px solid white;
+            position: absolute;
+            top: .077em;
+            left: .38em;
+            right: .3em;
+            bottom: .3em;
+            transform: rotate(30deg);
+            border-left-color: transparent;
+            border-top-color: transparent;
+            opacity: 0;
+            /*Em CSS, a propriedade opacity controla a transparência de um elemento. Ela aceita valores entre 0 (totalmente transparente) e 1 (totalmente opaco).*/
+            transition: opacity .5s;
+            /*
+            A propriedade transition em CSS permite animar a mudança de valores de uma propriedade CSS de forma suave ao longo de um período de tempo. Com ela, você define quais propriedades vão ser animadas, a duração da animação, o tipo de interpolação (curva de aceleração/desaceleração) e o atraso (se houver).
+
+            transition: <propriedades> <duração> <função-de-tempo> <atraso>;
+
+            propriedades: A propriedade CSS que será animada (ex: background-color, width).
+            
+            duração: O tempo que a transição levará (ex: 0.5s).
+
+            função-de-tempo: Define como a animação será acelerada/desacelerada (ex: ease, linear).
+
+            atraso: O tempo de espera antes da animação começar (ex: 0s)
+            */
+        }
+        .lbl2 input[type="checkbox"]:checked + span::before{
+            opacity: 1;
+        }
+        .lbl2 input[type="checkbox"]{
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            /*Em CSS, a propriedade overflow controla como o conteúdo que excede o tamanho de um elemento é tratado. O valor overflow: auto; faz com que barras de rolagem apareçam automaticamente quando o conteúdo ultrapassar o tamanho do elemento. Já overflow: hidden; oculta qualquer conteúdo que ultrapasse o limite do elemento, sem permitir rolagem. Outros valores incluem visible, que mostra o conteúdo extra sem nenhuma restrição, e scroll, que sempre exibe barras de rolagem, mesmo quando não são necessárias.*/
+            position: absolute;
+            outline: none;
+        }
+        .lbl2 input[type="checkbox"]:focus+span{
+            outline: 2px solid black;
+            outline-offset: -2px;
+            /*O outline-offset em CSS é uma propriedade que define a distância entre a borda da caixa de um elemento e o contorno (outline) aplicado a ele. Por padrão, o contorno fica diretamente sobre a borda do elemento, mas ao usar o outline-offset, você pode afastá-lo para fora ou para dentro da caixa.
+            Valor positivo: o contorno será deslocado para fora da borda do elemento.
+            Valor negativo: o contorno será deslocado para dentro da borda do elemento.*/
+            box-sizing: border-box;
+        }
+        
+        .switch input[type="checkbox"]{
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            outline: none;
+            border: none;
+        }
+        .switch span{
+            display: inline-block;
+            font-size: 26px;
+            width: 1.5em;
+            height: .7em;
+            background-color: #7a8184;
+            border: 1px solid black;
+            border-radius: 9px;
+            position: relative;
+        }
+        
+        .switch input[type="checkbox"] + span::after{
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            border: 2px solid black;
+            position: absolute;
+            border-radius: 50%;
+            background-color: rgb(209, 203, 203);
+            transform: translateX(-1px);
+            transition: transform .5s ease-in-out .2s;
+        }
+        .switch input[type="checkbox"]:checked + span::after{
+            content: "";
+            width: 15px;
+            height: 15px;
+            display: block;
+            border: 2px solid black;
+            position: absolute;
+            border-radius: 50%;
+            background-color: white;
+            transform: translateX(20px);
+            transition: transform .5s ease-in-out .2s;
+        }
+        .switch input[type="checkbox"]:checked + span {
+            background-color: white;
+        }
+        .switch input:focus + span{
+            outline:  2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <h1>Checkbox</h1>
+
+    <input type="checkbox" id="html" checked class="chk1">
+    <label for="html"><span></span> HTML</label>
+
+    <input type="checkbox" id="css" class="chk1">
+    <label for="css"><span></span> CSS</label>
+
+    <input type="checkbox" id="js" class="chk1">
+    <label for="js"><span></span> JavaScript</label>
+
+    <hr>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="lbl2">
+        <input type="checkbox">
+        <span></span>
+        JavaScript
+    </label>
+
+    <hr>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        HTML
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        CSS
+    </label>
+
+    <label class="switch">
+        <input type="checkbox">
+        <span></span>
+        JavaScript
+    </label>
+</body>
+</html>

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transform</title>
+    <style>
+        body{
+            margin-bottom: 100vh;
+        }
+        div{
+            outline: 10px solid #888;
+            width: 80%;
+            height: 200px;
+            margin: .5em auto;
+        }
+        p{
+            width: 100%;
+        }
+        .destaque{
+            background-color: yellow;
+        }
+        .div1 .destaque{
+            /*transform: Propriedade CSS usada para aplicar transformações como rotação, escala, inclinação e movimentação em elementos. É uma propriedade abrangente que pode conter várias funções transformadoras.*/
+            transform: translate(50%);
+            /*O valor translate(50%) no CSS é usado dentro da função transform para deslocar um elemento em 50% de sua própria largura ou altura, dependendo de qual eixo (horizontal ou vertical) você está aplicando o valor.
+            O valor 50% em translate é calculado com base no tamanho do próprio elemento.
+            */
+        }
+        .div2 .destaque{
+            position: relative;
+            left: 25%;
+            top: 50%;
+        }
+
+        .div3 .destaque{
+            transform: rotate(30deg);
+            /*A função rotate() gira o elemento em torno de um ponto fixo. No caso de rotate(30deg):
+            30deg é o ângulo da rotação, medido em graus.
+            Um valor positivo, como 30deg, gira o elemento no sentido horário.
+            Um valor negativo, como -30deg, gira o elemento no sentido anti-horário.*/
+        }
+
+        .div4 .destaque{
+            transform: scale(.5,2);
+            /*O transform: scale(.5, 2) é uma propriedade CSS usada para alterar o tamanho de um elemento em relação ao seu ponto de origem. A função scale(x, y) aceita dois parâmetros:
+
+            O primeiro valor (x): Representa o fator de escala horizontal (largura).
+            O segundo valor (y): Representa o fator de escala vertical (altura).
+            No caso de scale(.5, 2):
+            .5 (horizontal): O elemento será reduzido à metade de sua largura original.
+            2 (vertical): O elemento será aumentado para o dobro de sua altura original.*/
+        }
+
+        .div5 .destaque{
+            transform: skew(15deg,15deg);
+            /*O comando transform: skew(15deg, 15deg) aplica uma transformação no elemento, distorcendo-o na direção dos eixos X e Y. O valor 15deg indica que o elemento será inclinado em 15 graus em cada um desses eixos. Isso faz com que o elemento pareça "deslocado" ou "inclinado", criando um efeito de distorção diagonal.
+            */
+        }
+        .div6 .destaque{
+            transform: translate(0) rotate(5deg);
+            transform-origin: top right;
+        }
+        .div7 .destaque{
+            transform: rotate(45deg) translate(100px);
+            transform-origin: left bottom;
+            /*A propriedade transform-origin define o ponto de origem da transformação. Ou seja, é o ponto em torno do qual a transformação (como rotação ou escala) ocorre.
+            Por padrão, esse ponto de origem é o centro do elemento (50% 50%), mas você pode alterá-lo para qualquer posição, usando valores em pixels, porcentagem ou palavras-chave como top, right, bottom e left.*/
+        }
+    </style>
+</head>
+<body>
+    <div class="div1">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div2">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div3">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div4">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div5">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div6">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+
+    <div class="div7">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p class="destaque">Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quidem, dolorem!</p>
+    </div>
+</body>
+</html>

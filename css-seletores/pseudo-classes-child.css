@@ -1,19 +1,27 @@
 p:first-child{
+    /*:first-child: Seleciona o primeiro filho de um elemento pai.*/
     color: red;
 }
 p:last-child{
+    /*:last-child: Seleciona o último filho de um elemento pai.*/
     color: orange;
 }
 p:nth-child(3){
+    /*O :nth-child() em CSS é um seletor que permite selecionar elementos com base em sua posição dentro de um elemento pai. Ele recebe um argumento que pode ser um número, uma expressão ou palavras-chave (como odd, even) para determinar quais elementos serão selecionados. O nth-child() é muito útil quando você deseja aplicar estilos a elementos com uma posição específica, sem precisar de classes ou IDs extras.
+    O seletor p:nth-child(3) seleciona o terceiro elemento <p> dentro de um elemento pai e aplica a cor de fundo azul a ele. Vale notar que o nth-child() conta todos os elementos filhos, independentemente de seu tipo (por isso, se houver outros elementos entre os <p>, o terceiro <p> será considerado a partir da contagem total de filhos).*/
     background-color: blue;
 }
 p:first-of-type{
+    /*:first-of-type: Esse seletor aplica-se ao primeiro elemento de um determinado tipo (como uma <p>, <div>, etc.) dentro de seu contêiner pai, independentemente de sua posição no fluxo do DOM. Por exemplo, o seguinte código aplica um fundo verde ao primeiro <p> em seu contêiner:*/
     background-color: green;
 }
 P:last-of-type{
+    /*:last-of-type: Esse seletor aplica-se ao último elemento de um determinado tipo dentro de seu contêiner pai. Por exemplo, o código abaixo aplica um fundo vermelho ao último <p> em seu contêiner:*/
     background-color: red;
 }
 p:nth-of-type(2){
+    /*A pseudo-classe :nth-of-type() no CSS é usada para selecionar elementos com base em sua posição em relação ao tipo de elemento irmão (ou seja, dentro do mesmo contêiner) e sua ordem na árvore DOM. Ela permite que você estilize um ou mais elementos de um tipo específico, dependendo de sua ordem.
+    A regra diz que o segundo elemento <p> dentro de seu contêiner pai deve ter o texto sublinhado. A função nth-of-type(2) seleciona o segundo elemento <p> (não importa se há outros tipos de elementos antes ou entre eles, desde que sejam <p>). Ou seja, ela conta apenas os elementos do tipo <p> e aplica a estilização ao segundo.*/
     text-decoration: underline;
 }/*
 li:nth-child(1n){
@@ -26,8 +34,15 @@ li:nth-child(even){
     background-color: yellow;
 }*/
 li:nth-child(3n - 2){
+    /*Este seletor seleciona um elemento com base na sua posição em relação ao seu pai, independentemente do tipo do elemento. A fórmula 3n - 2 significa que o seletor irá selecionar o 1º, 4º, 7º, 10º, etc., elementos de um pai.
+
+    n é um número inteiro que começa em 0 e aumenta de 1 em 1.
+    Quando n = 0, temos 3(0) - 2 = -2, mas os índices dos elementos começam em 1, então o primeiro valor válido será quando n = 1, resultando em 3(1) - 2 = 1, que é o 1º elemento.
+    Para n = 2, temos 3(2) - 2 = 4, que seleciona o 4º elemento.*/
     background-color: red;
 }
 p:nth-of-type(3n - 2){
+    /*Esse seletor é semelhante, mas a diferença é que ele seleciona apenas os elementos de um determinado tipo (por exemplo, <p>, <div>, <li>, etc.) com base na sua posição entre outros elementos do mesmo tipo.
+    Já em p:nth-of-type(3n - 2), o CSS vai afetar os 1º, 4º, 7º, 10º, etc., elementos <p>, mas somente quando eles forem do tipo <p> e não de outros tipos de elementos.*/
     text-align: right;
 }

@@ -1,12 +1,20 @@
 @charset "UTF-8";
 a[href="#"]:not(.link-ok){
+    /*O :not() é um seletor em CSS que permite aplicar estilos a elementos que não correspondem a um seletor específico. Ele é uma forma de excluir certos elementos de um estilo sem precisar especificar todos os outros casos.
+    Este seletor aplica a propriedade opacity: .2 a todos os elementos <a> que possuem href="#", exceto aqueles que também têm a classe .link-ok. Ou seja, ele aumenta a opacidade de links com href="#", mas mantém a opacidade normal para os links que têm a classe .link-ok.
+    */
     opacity: .2;
 }
 a[href^="http"]{
+    /*No CSS, o ^ é usado como parte de um seletor de atributo, indicando que ele seleciona elementos cujo valor de atributo começa com um determinado valor. No caso do seletor a[href^="http"], ele seleciona todos os links (<a>) cujos atributos href começam com a string "http".*/
     color: red;
 }
 
 a[href$=".pdf"]{
+    /*
+    O símbolo $ em CSS, no seletor a[href$=".pdf"], é um operador de correspondência de sufixo. Ele permite selecionar elementos cujo atributo href termina com uma determinada string, neste caso, com a extensão .pdf.
+    Ou seja, o seletor a[href$=".pdf"] irá aplicar estilos a todos os links (<a>) cujo valor do atributo href termine com .pdf. O estilo que você definiu, color: green;, fará com que todos esses links fiquem na cor verde.
+    */
     color: green;
 }
 a[target="_blank"]{

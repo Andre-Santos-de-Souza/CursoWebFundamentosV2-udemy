@@ -12,9 +12,15 @@ article a > b{
     color: green;
 }
 h3 + p{
+    /*Em CSS, o + é um seletor adjacente de irmãos (ou "adjacent sibling combinator"). Ele seleciona o primeiro elemento que é irmão imediato (ou seja, que aparece imediatamente depois) do elemento anterior no HTML.
+    Isso significa que o estilo background-color: yellow; será aplicado ao primeiro parágrafo (<p>) que aparece imediatamente após um cabeçalho (<h3>) no HTML. Ou seja, o parágrafo só receberá o fundo amarelo se ele for o próximo elemento diretamente após um <h3>. Outros elementos <p> que não seguem imediatamente um <h3> não serão afetados por essa regra.
+    */
     background-color: yellow;
 }
 h3 ~ p{	
+    /*No CSS, o seletor ~ é um seletor de irmãos gerais. Ele seleciona todos os elementos que são irmãos do elemento anterior e que vêm depois dele na árvore DOM, desde que possuam a mesma hierarquia (ou seja, estejam dentro do mesmo elemento pai).
+    dele (dentro do mesmo elemento pai) terão o background color amarelo. Ou seja, ele vai aplicar o estilo em todos os parágrafos que estão em seguida ao título <h3>, mas não nos parágrafos que estão antes ou no próprio <h3>.
+    */
     border:4px dashed orange;    
 }
 .destaque{

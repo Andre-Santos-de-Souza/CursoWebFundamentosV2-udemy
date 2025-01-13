@@ -10,6 +10,9 @@
             background-color: yellow;
         }
         p:has(.teste){
+            /*
+            O seletor :has() em CSS é uma funcionalidade chamada "seletor de escopo condicional" ou "seletor de contêiner", que permite selecionar um elemento com base nos elementos filhos que ele contém. Ele é usado para aplicar estilos a um elemento pai (ou qualquer outro elemento) quando ele contém um determinado tipo de conteúdo ou quando um critério específico é atendido dentro dele.
+            A regra CSS acima aplica um fundo cinza (#ccc) a qualquer <p> que contenha um elemento com a classe .teste. Ou seja, se dentro de um parágrafo (<p>) houver um elemento com a classe teste, o fundo desse parágrafo será alterado para a cor cinza.*/
             background-color: #ccc;
         }
         table{
@@ -26,9 +29,16 @@
             text-align: left;
         }
         tr:nth-child(even){
+            /*
+            O :nth-child é um seletor CSS utilizado para selecionar elementos com base em sua posição dentro de um contêiner. Ele permite aplicar estilos a elementos que ocupam uma posição específica em relação aos seus irmãos, de forma eficiente.
+
+            O seletor :nth-child(even) seleciona os elementos que são filhos pares do contêiner. Ou seja, ele aplica o estilo aos elementos que ocupam as posições 2, 4, 6, 8, etc.*/
             background-color: #f9f9f9;
         }
         tr:nth-child(odd){
+            /*O :nth-child é um seletor CSS que permite selecionar elementos de acordo com sua posição em relação aos seus irmãos dentro do mesmo elemento pai. Ele é muito útil para aplicar estilos a elementos de forma alternada ou para selecionar elementos específicos com base em um padrão.
+            O seletor tr:nth-child(odd) aplica o estilo background-color: #f9f9f9 a todas as linhas <tr> em uma tabela (ou qualquer outro tipo de elemento de lista ou contêiner) que sejam ímpares, ou seja, aquelas que estão na posição 1, 3, 5, 7, e assim por diante.
+            */
             background-color: white;
         }
         tr:hover{
