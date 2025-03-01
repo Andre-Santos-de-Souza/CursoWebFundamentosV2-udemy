@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>Projeto My Components</title>
+
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+
+<body>
+
+    <header class="main-header">
+        <nav class="main-nav">
+            <a href="#">
+                <img src="imagens/perfil.png" alt="Daniel Tapias Morales" class="perfil-img">
+            </a>
+
+            <ul>
+
+                <li><a href="index.html">Home</a></li>
+                <li><a href="tipografia.html">Tipografia</a></li>
+                <li><a href="cards.html">Cards</a></li>
+                <li><a href="listas.html">Listas</a></li>
+                <li><a href="formulario.html">Formulário</a></li>
+                <li><a href="botoes.html">Botões</a></li>
+                <li><a href="tabelas.html">Tabelas</a></li>
+
+            </ul>
+
+        </nav>
+    </header>
+
+    <main class="main">
+        <h1>My Components</h1>
+
+        <article class="hightlight">
+            <h2>Tipografia</h2>
+            <p>A Tipografia transmite nossas definições de tamanhos e espaçamento e deve ser utilizada respeitando a
+                hierarquia dos elementos na interface</p>
+        </article>
+
+        <section>
+            <h3>Elementos</h3>
+
+            <article>
+                <h4>Textos</h4>
+
+                <p>Esse texto esta escrito em <b>negrito</b> e esse texto é um <strong>texto forte</strong>.</p>
+                <p>Esse texto está em <i>itálico</i> e este está <em>com ênfase</em>.</p>
+                <p>Isto é um texto escrito de forma <u class="underline">erada</u> e isso é um <a href="#"> link</a>.
+                </p>
+            </article>
+
+            <article>
+                <h4>Sobreescrito e subscrito</h4>
+                <p>3<sup>2</sup> é igual à 9</p>
+                <p>a fórmula da água é H<sub>2</sub>O </p>
+            </article>
+
+            <article>
+                <h4>Abreviações</h4>
+
+                <p>Para criar páginas na web precisamos aprender sobre <abbr
+                        title="HiperText Markup Language">HTML</abbr>.</p>
+
+                <p>Para criar páginas na web precisamos aprender sobre
+                    <a href="#html-dfn"><abbr title="HiperText Markup Language">HTML</abbr></a> .
+                </p>
+
+
+                <!-- O <dfn> está sendo usado para marcar o termo "HTML" como um conceito que está sendo definido no contexto da frase. Já a tag <abbr> adiciona um título com o significado completo da sigla. -->
+                <p>O <dfn id="html-dfn"> <abbr title="HiperText Markup Language">HTML</abbr> </dfn> é a principal
+                    linguagem
+                    da web onde podemos incluir nosso conteúdo de forma semântica</p>
+            </article>
+
+            <article>
+                <h4>Citações</h4>
+
+                <!-- <blockquote>: Usada para indicar uma citação em bloco, geralmente longa, destacando o texto do restante do conteúdo. -->
+                <blockquote>
+                    <p>O ruim não é ter trabalho. O ruim é ter de trabalhar</p>
+                    <!-- <cite>: Usada para referenciar a fonte de uma citação ou obra, como o nome de um autor, livro, site, etc. -->
+                    <cite>Seu Madruga</cite>
+                </blockquote>
+
+                <blockquote cite="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/blockquote">
+                    O Elemento HTML &lt;blockquote&gt; (ou Elemento HTML de citação de bloco) indica que o texto
+                    incluído é uma longa citação.
+                    <cite>MDN</cite>
+                </blockquote>
+
+                <!-- A tag <q> é usada para indicar pequenas citações dentro de um texto. Os navegadores geralmente exibem o conteúdo dentro de <q> com aspas automáticas. -->
+                <p>Segundo o Seu Madruga <q>A vingança nunca é plena, mata a alma e envenena</q>.</p>
+
+                <p>
+                    De acordo com o site da Mozilla,
+                    <q cite="https://www.mozilla.org/en-US/about/history/details/">
+                        Firefox foi lançado em 2004 e se tornou um grande sucesso.</q>
+                </p>
+
+                <p>O filme <cite>Escola do Rock</cite> contém várias músicas antigas.</p>
+
+            </article>
+
+            <article>
+                <h4>Coisas de computador</h4>
+
+                <!-- A tag <code> é usada para exibir trechos de código-fonte ou comandos em um estilo monoespaçado, melhorando a legibilidade. -->
+                <p>A propriedade <code>background</code> do CSS serve para colocar uma imagem de fundo</p>
+
+                <!-- A tag <pre> é usada para exibir texto pré-formatado em HTML, preservando espaços, quebras de linha e tabulações exatamente como estão no código-fonte. -->
+                <pre>
+Este texto é um
+
+texto pré-formatado.
+                </pre>
+
+                <pre>
+                    <code>
+article {
+    padding-top: 1px;
+    padding-bottom: 1px;                        
+}
+                    </code>
+                </pre>
+
+                <p>
+                    Após executar o método <code>push()</code> obtive o retorno
+                    <!-- A tag <samp> é usada para exibir texto de saída de um programa ou sistema, geralmente representando mensagens de erro, retornos de comandos ou respostas geradas por scripts. O navegador a renderiza com uma fonte monoespaçada, facilitando a distinção desse tipo de conteúdo. -->
+                    <samp lang="en-us"> undefined has not a push() function</samp>
+                </p>
+
+                <!-- A tag <kbd> é usada para representar a entrada de teclado em um documento HTML. Ela indica que o texto dentro dela deve ser exibido em um estilo monoespaçado, destacando comandos ou atalhos de teclado.  -->
+                <p>Pressione a tecla <kbd> CTRL</kbd> + <kbd>C</kbd> para copiar</p>
+            </article>
+
+            <article>
+                <h4>Datas e horários</h4>
+
+                <p>O evento ocorrerá em <time datetime="2025-11-10"> 10 de Novembro de 2025</time>.</p>
+                <p>O evento ocoorerá em <time datetime="2025-11-10"> 10/11/2025 </time>.</p>
+                <p>O evento ocorrerá às <time datetime="2025-11-10T20:00:00"> 20h00 do dia 10 de Novembro de
+                        2025</time>.</p>
+                
+                <!--A tag <time> é usada para representar uma data, hora ou período de tempo no HTML, ajudando na acessibilidade e permitindo que navegadores e mecanismos de busca interpretem corretamente a informação temporal.
+
+                O atributo datetime define o valor em um formato padrão (ISO 8601), garantindo precisão e facilitando o processamento por sistemas automatizados. No exemplo, 2025-11-10T20:00:00-03:00 representa 10 de novembro de 2025 às 20h00 no fuso horário UTC-3.-->
+                <p>O evento ocorrerá às <time datetime="2025-11-10T20:00:00-03:00"> 20h00 do dia 10 de Novembro de
+                        2025</time>.</p>
+
+                <h5 lang="en-us">JS Conference</h5>
+                <p>O evento iniciará exatamente às <time datetime="19:00"> 19h00</time>.</p>
+
+                <!--
+                As tags <del> e <ins> são usadas para indicar alterações em um texto:
+
+                <del> (delete) marca um trecho removido ou substituído, geralmente exibindo-o riscado.
+                <ins> (insert) destaca um novo trecho inserido, podendo ser exibido sublinhado.
+                -->
+                <p>O evento ocorrerá às 20h00 do dia <del datetime="2025-11-05"> 10 de Novembro de
+                        2025</del> <ins> <time datetime="2025-11-11T20:00:00-03:00"> 11 de Novembro de
+                            2025</time></ins>.</p>
+            </article>
+        </section>
+
+
+    </main>
+
+
+</body>
+
+</html>
