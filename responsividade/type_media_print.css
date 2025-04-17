@@ -1,0 +1,10 @@
+.only-print{
+    color: black;
+    font-family: serif;
+}
+a::after{
+    /* O attr() é uma função do CSS que permite acessar o valor de um atributo HTML de um elemento e usá-lo dentro do conteúdo gerado com content, como em pseudoelementos ::before ou ::after. */
+    content: "(" attr(href) ") - (" attr(title) ")";
+    display: inline-block;
+    margin-left: .5em;
+}

@@ -1,0 +1,27 @@
+/*A propriedade orientation dentro de uma regra @media em CSS é usada para aplicar estilos com base na orientação da tela do dispositivo.
+Tipos de orientação:
+landscape (paisagem):
+A largura da tela é maior que a altura (por exemplo, 1200x800).
+
+portrait (retrato):
+A altura da tela é maior que a largura (por exemplo, 800x1200).*/
+@media screen and (min-width:800px) and (orientation:landscape){
+    body{
+        background-color: dimgray;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    h1{
+        font-weight: 300;
+    }
+    .cards_container{
+        display: flex;
+        flex-direction:row;
+        gap: 1rem;
+    }
+    .card{
+        background-color: rgb(39,39,39);
+        color: white;
+        padding: 1rem;
+        box-sizing: border-box;
+    }
+}

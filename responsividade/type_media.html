@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="type_media_print.css" media="print">
+    <title>Media Types</title>
+    <style>
+        
+        body{
+             color: rgb(250, 158, 1158);
+            font-family: sans-serif;
+        }
+        /* O @media screen é uma regra CSS usada para aplicar estilos apenas quando o conteúdo está sendo exibido em uma tela (como em computadores, tablets ou celulares), e não em outros meios, como impressão. */
+        @media screen {
+            body{
+                background-color: #ccc;
+            }
+        }
+
+        /* A regra @media print é usada em CSS para definir estilos específicos que serão aplicados somente quando a página for impressa ou visualizada no modo de impressão. */
+        /* @media print{
+            body{
+                color: black;
+                font-family: serif;
+            }
+        } */
+    </style>
+</head>
+<body class="only-print">
+    <h1>Media Types</h1>
+
+    <a href="https://serliv.com" title="visite a página da Serliv">Serliv - cursos on-line</a>
+</body>
+</html>

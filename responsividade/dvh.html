@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*
+        O vh em CSS é uma unidade de medida relativa à altura da janela de visualização (viewport).
+        vh = viewport height (altura da janela do navegador).
+        1vh = 1% da altura total da tela visível.
+        */
+
+        /*
+        O dvh em CSS é uma unidade de medida relativamente nova que significa "Dynamic Viewport Height" (altura da viewport dinâmica). Ela é usada para lidar melhor com a altura da tela em dispositivos móveis, especialmente em navegadores que escondem ou mostram barras de navegação dinamicamente (como a barra de endereços no navegador do celular).
+        */
+        
+        /*
+        Em CSS, svh significa "Small Viewport Height" (altura pequena da área visível da tela). Ele é uma unidade relativa usada para definir tamanhos com base na altura da área visível do navegador, mas tem um comportamento específico.
+        Em dispositivos móveis, o vh pode causar problemas de layout porque a altura da viewport muda quando a barra de endereço aparece ou desaparece. Com svh, o navegador considera a menor altura da tela para evitar essas mudanças bruscas.
+        */
+
+        /*
+        O lvh em CSS é uma unidade de medida relativa que representa a altura da janela de visualização (viewport), mas com uma característica interessante: ela é ajustada de acordo com a altura da janela, mas levando em consideração o comportamento do teclado em dispositivos móveis.
+        */
+        body{
+            margin: 0;
+        }
+        h1{
+            color: white;
+            font-size: 3rem;
+        }
+        section{
+            height: 100vh;
+            padding: 1rem;
+            box-sizing: border-box;
+        }
+        section:nth-child(odd){
+            background-color: blueviolet;
+        }
+        section:nth-child(odd){
+            background-color: brown;
+        }
+    </style>
+</head>
+<body>
+    <section>
+        <h1>Testando novas unidades de medidas</h1>
+    </section>
+
+    <section>
+        <h1>Testando novas unidades de medidas</h1>
+    </section>
+
+    <section>
+        <h1>Testando novas unidades de medidas</h1>
+    </section>
+
+    <section>
+        <h1>Testando novas unidades de medidas</h1>
+    </section>
+</body>
+</html>

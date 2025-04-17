@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Iframe</title>
+    <style>
+        .iframeContainer{
+            display: flex;
+            gap: 1rem;
+        }
+        iframe{
+            width: 100%;
+            /*A propriedade CSS aspect-ratio define a proporção entre a largura e a altura de um elemento. Quando você usa:*/
+            aspect-ratio: 16 / 9;
+            /*
+            Você está dizendo que a largura do elemento deve ser 16 unidades para cada 9 unidades de altura, ou seja, uma proporção de tela widescreen (muito usada em vídeos e monitores).
+
+            Exemplo visual:
+            Se a largura for 1600px, a altura será automaticamente 900px, mantendo a proporção 16:9.
+
+            Por que usar aspect-ratio?
+            °Garante que o elemento mantenha uma proporção mesmo com redimensionamento de tela.
+            °É útil para vídeos, imagens, contêineres responsivos, etc.
+            °Evita que você tenha que calcular a altura com base na largura usando padding-top como antigamente.
+            */
+        }
+    </style>
+</head>
+<body>
+   <h1>Iframe</h1>
+
+   <div class="iframeContainer">
+        <iframe src="https://serliv.com" frameborder="0" ></iframe>
+
+        <iframe src="https://www.youtube.com/embed/CMJVePeOc8o?si=sL76bPsbb17AQtDw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+   </div>
+
+   <!-- <iframe src="audio.html"></iframe> -->
+   
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vídeo</title>
+    <style>
+        /*O ::cue é um pseudoelemento CSS usado para aplicar estilos às legendas exibidas por <track> em vídeos HTML5. Ele funciona somente com arquivos WebVTT (.vtt) usados nas tags <track> com kind="subtitles" ou kind="captions".*/
+        ::cue{
+            color: yellow;
+            font-size: 1.6em;
+            background-color: rgb(0 0 0 / .5);
+        }
+    </style>
+</head>
+<body>
+   <video controls autoplay muted loop>
+        <source src="media/video.mp4" type="video/mp4">
+        <source src="media/video.ogg" type="video/ogg">
+        <source src="media/video.webm" type="video/webm">
+
+        <!--
+        src	Caminho para o arquivo .vtt (WebVTT – Web Video Text Tracks) que contém as legendas ou dados temporizados.
+
+        kind	Tipo da faixa. Pode ser:
+        • subtitles – traduções do diálogo
+        • captions – legendas completas, incluindo sons
+        • descriptions – descrição de cenas
+        • chapters – divisão do vídeo por capítulos
+        • metadata – dados para scripts
+
+        srclang	Código do idioma da faixa (ex: pt para português, en para inglês).
+
+        label	Nome que aparece para o usuário escolher a legenda.
+
+        O atributo default serve para indicar qual faixa de legenda deve ser exibida automaticamente quando o vídeo é carregado, sem o usuário precisar escolher manualmente.-->
+        <track src="media/track.pt.vtt" kind="captions" srclang="pt" label="Português" default></track>
+        <track src="media/track.en.vtt" kind="captions" srclang="en" label="English" default></track>
+        <p>O seu browser não suporta vídeo</p>
+   </video>
+</body>
+</html>
