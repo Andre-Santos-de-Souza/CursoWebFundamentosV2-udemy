@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .gridContainer {
+            display: grid;
+            width: 90%;
+            background: #ccc;
+            gap: 10px;
+
+            grid-template-rows: repeat(3,100px);
+            /* O grid-auto-flow é uma propriedade do CSS Grid Layout que controla como os itens são inseridos automaticamente na grade (grid) quando você não especifica suas posições explicitamente.
+            °row (padrão) -> Os itens são colocados linha por linha, da esquerda para a direita e de cima para baixo.
+            °column ->	Os itens são colocados coluna por coluna, de cima para baixo e da esquerda para a direita.
+            °row dense -> Igual ao row, mas tenta preencher lacunas disponíveis (mais "compacto").
+            °column dense -> Igual ao column, mas também tenta preencher lacunas disponíveis.
+            */
+            grid-auto-flow: column;
+            /* Como funciona o grid-auto-columns
+            Quando você define um grid container, você geralmente especifica o número de colunas usando grid-template-columns. Porém, se você adicionar mais itens do que o número de colunas definidas, o navegador pode criar colunas extras automaticamente.
+
+            É aí que o grid-auto-columns entra: ele define o tamanho dessas colunas extras.*/
+            grid-auto-columns: 50px 100px 200px 190px;
+
+            /* A propriedade grid-auto-rows no CSS é usada em layouts de grid para definir a altura das linhas que são criadas automaticamente pelo navegador quando você não especifica explicitamente a quantidade ou tamanho de linhas no seu grid.
+
+            🌟 Em outras palavras:
+            Se você tiver mais itens do que o número de linhas definido no seu grid-template-rows, o navegador vai criar linhas extras automaticamente — e o grid-auto-rows define a altura dessas linhas.
+            grid-auto-rows: minmax(90px, auto); */
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+       
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+       <div class="gridItem">1</div>
+       <div class="gridItem">2</div>
+       <div class="gridItem">3</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">5</div>
+       <div class="gridItem">6</div>
+       <div class="gridItem">7</div>
+       <div class="gridItem">8</div>
+       <div class="gridItem">8</div>
+       <div class="gridItem">8</div>
+       <div class="gridItem">8</div>
+       <div class="gridItem">8</div>
+    </div>
+</body>
+
+</html>

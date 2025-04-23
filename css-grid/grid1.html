@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        .gridContainer {
+            width: 300px;
+            background: #5c5c5c;
+        }
+
+        .gridItem {
+            background: #999;
+            font-size: 2em;
+            font-family: sans-serif;
+            padding: 5px 15px;
+        }
+
+        .gridItem:nth-child(even) {
+            background: #999;
+            color: white;
+        }
+
+        .gridItem:nth-child(odd) {
+            background: #eee;
+        }
+
+        /* GRID */
+       .gridContainer{
+            width: 100%;
+            /* O display: grid; é uma propriedade do CSS que transforma um elemento HTML em um container de grade (grid container), permitindo organizar seus elementos filhos (os itens da grade) em linhas e colunas.
+            Quando você aplica display: grid; em um elemento, ele vira um grid container, e os elementos dentro dele se tornam grid items. */
+            display: grid;
+
+            /* A propriedade grid-template-columns é usada em CSS Grid para definir o número e o tamanho das colunas de um grid container. */
+            /* grid-template-columns: 100px 100px 100px; */
+
+            /* No CSS Grid, o fr significa fração do espaço disponível.
+            Na declaração grid-template-columns: 50px 1fr 100px;:
+            50px: a primeira coluna terá largura fixa de 50 pixels.
+            1fr: a segunda coluna ocupará o restante do espaço disponível, depois que as colunas fixas forem consideradas.
+            100px: a terceira coluna terá largura fixa de 100 pixels.
+            Ou seja, o 1fr ajusta-se automaticamente ao espaço que sobrar entre os 50px e os 100px. */
+            grid-template-columns: 50px 1fr 100px;
+
+            /* A propriedade grid-template-rows do CSS é usada para definir a altura das linhas em um layout de grid (grade). */
+            /* grid-template-rows: 100px 100px; */
+            grid-template-rows: repeat(2,100px);
+
+            /* gap (ou gap:) em CSS é uma propriedade usada para definir o espaçamento entre linhas e colunas em layouts com grid ou flex (especialmente com flex-wrap ativado). */
+            /* gap: 16px 20px; */
+
+            /* O row-gap em CSS é uma propriedade usada para definir o espaçamento entre as linhas de um layout com múltiplas linhas, como em grids ou flexbox com wrap. */
+            row-gap: 10px;
+
+            /* column-gap em CSS define o espaçamento horizontal entre colunas em layouts com múltiplas colunas, como em display: grid ou column-count. */
+            column-gap: 20px;
+       }
+
+       .gridItem:nth-child(1){
+            background-color: yellow;
+
+            /* 
+            O grid-row-start é uma propriedade do CSS usada no contexto do layout CSS Grid. Ela define a linha de início de uma célula em uma grade (grid). Mais especificamente, você usa essa propriedade para determinar em qual linha (horizontal) um item de grid começará.
+            grid-row-start: 1;
+
+            A propriedade grid-row-end no CSS é usada dentro de um layout de grid para determinar onde uma linha de um item de grid termina. Ela especifica a linha final que o item ocupará ao longo do eixo vertical (linhas horizontais) de um grid.
+            grid-row-end: 2; */
+
+            /*grid-row é um atalho de grid-row-start e grid-row-end*/
+            grid-row: 1/2;
+
+            /* O grid-column-start é uma propriedade do CSS que faz parte do sistema de grid layout (layout de grade). Ela é usada para definir em qual linha (horizontal) do grid o item deve começar.
+            Quando você utiliza o CSS Grid, você divide o contêiner em linhas e colunas. Cada item dentro desse contêiner pode ser posicionado dentro dessas linhas e colunas. O grid-column-start controla a posição inicial de um item em relação às colunas do grid. */
+            /* grid-column-start: 1; */
+
+            /* O grid-column-end é uma propriedade do CSS usada no contexto do CSS Grid Layout. Ela especifica onde a área de uma célula ou item de grid deve terminar na linha de colunas de uma grade (grid). */
+            /*Se colocar -1 o item ocupa toda a largura do container*/
+            /*Se colocar -2 o item ocupa até a penultima coluna do container*/
+            /* grid-column-end: -1; */
+
+            /*grid-column é um atalho de grid-column-start e grid-column-end*/
+            grid-column: 1/-2;
+       }
+       .gridItem:nth-child(5){
+            grid-row: 1/-1;
+            grid-column: 4 / -1;
+       }
+       .gridItem:nth-child(6){
+            /*No contexto do CSS Grid Layout, a propriedade grid-column define em quais colunas um item do grid deve se estender. Quando você usa o valor 1/span 3, isso significa o seguinte:
+            O número 1 indica que o item começa na coluna 1 (a primeira coluna).
+            O span 3 significa que o item deve se estender por 3 colunas a partir da coluna 1.*/
+            grid-column: 1/span 3;
+       }
+       .gridItem:nth-child(4){
+            /* grid-row-start:2;
+            grid-column-start: 3;
+            grid-row-end:-1;
+            grid-column-end:4; */
+
+            /* grid-area é um atalho para grid-row-start -> grid-column-start -> grid-row-end -> grid-column-end*/
+            grid-area: 2/3/-1/4;
+       }
+    </style>
+</head>
+
+<body>
+    <h2>Grid Layout</h2>
+
+
+    <div class="gridContainer">
+        <div class="gridItem">1</div>
+        <div class="gridItem">2</div>
+        <div class="gridItem">3</div>
+        <div class="gridItem">4</div>
+        <div class="gridItem">5</div>
+        <div class="gridItem">6</div>
+    </div>
+</body>
+
+</html>

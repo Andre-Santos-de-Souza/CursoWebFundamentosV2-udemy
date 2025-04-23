@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid</title>
+
+    <style>
+        body {
+            margin: 0;
+        }
+
+        .gridContainer {
+            width: 90%;
+            background: #ccc;
+        }
+
+        .gridItem {
+            background-color: orange;
+            padding: 15px;
+            font-family: sans-serif;
+        }
+
+        /* GRID */
+
+        .gridContainer {
+            display: grid;
+            gap: 10px;
+            /*✅repeat(auto-fit, ...)
+            °repeat(): função que repete um valor várias vezes.
+
+            °auto-fit: o número de colunas será ajustado automaticamente com base no tamanho disponível do container.
+
+                °Ele colapsa colunas vazias, ou seja, tenta "encaixar" o máximo de colunas possível no espaço disponível.
+
+            ✅ minmax(90px, 1fr)
+            °Essa função define o tamanho mínimo e máximo de cada coluna.
+
+                °90px → tamanho mínimo da coluna.
+
+                °1fr → tamanho máximo da coluna, ou seja, ela pode crescer até ocupar 1 fração do espaço disponível.
+
+            Então cada coluna:
+
+                °nunca será menor que 90px,
+
+                °mas pode crescer para ocupar espaço sobrando.
+            
+            
+            ⚔️ Diferença entre auto-fit e auto-fill:
+                Ambos tentam colocar o maior número possível de colunas no container, mas se comportam diferente com espaço extra:    
+                °auto-fill -> Preenche o espaço com o máximo de colunas possíveis, mesmo que algumas estejam vazias (invisíveis).
+                °auto-fit -> Preenche com o máximo de colunas possíveis, mas colapsa as colunas vazias, ajustando o layout.*/
+            grid-template-columns: repeat(auto-fit,minmax(90px, 1fr));
+            /*O grid-auto-rows é uma propriedade do CSS Grid Layout usada para definir a altura das linhas que são criadas automaticamente em um grid, ou seja, aquelas que não são explicitamente definidas com grid-template-rows.
+
+            📌 Quando ele é útil?
+            Quando o conteúdo do seu grid faz com que mais linhas sejam necessárias além das que você planejou com grid-template-rows. Nesses casos, o navegador cria automaticamente essas linhas, e o grid-auto-rows define qual será a altura padrão delas.
+            O valor pode ser qualquer unidade de medida válida em CSS (px, %, fr, auto, min-content, max-content, etc.).*/
+            grid-auto-rows: minmax(100px, auto);
+        } 
+        
+    </style>
+</head>
+
+<body>
+    <div class="gridContainer">
+       <div class="gridItem">1</div>
+       <div class="gridItem">2</div>
+       <div class="gridItem">3</div>
+       <!-- <div class="gridItem">4</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">4 akckaskc a dkasjckkja acjaskdjsjkdask akcdkj</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">4</div>
+       <div class="gridItem">4</div> -->
+    </div>
+</body>
+
+</html>
