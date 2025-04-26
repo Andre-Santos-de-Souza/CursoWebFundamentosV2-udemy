@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*As @keyframes em CSS servem para criar animações definindo o que deve acontecer em diferentes momentos do tempo.
+        Você especifica etapas da animação (por exemplo, no início, no meio e no fim) e diz como o elemento deve se comportar em cada etapa.*/
+        @keyframes anda{
+            from{/*from = 0%*/
+                transform:  translateX(0);
+                background-color: yellow;
+            }
+            50%{
+                background-color: green;
+            }
+            to{/*from = 100%*/
+                transform:  translateX(300px);
+                background-color: blue;
+            }
+        }
+        @keyframes altura{
+            0%, 100%{
+                height: 80px;
+            }
+            20%,80%{
+                height: 120px;
+            }
+            /* 80%{
+                height: 120px;
+            } */
+            /* 100%{
+                height: 80px;
+            } */
+        }
+        @keyframes largura{
+            0%{
+                width: 100px;
+            }
+            100%{
+                width: 400px;
+            }
+        }
+        #anima{
+            outline: 3px solid red;
+            width: 400px;
+        }
+        #anima div{
+            width: 100px;
+            height: 50px;
+            background-color: #ccc;
+            margin-bottom: 10px;
+        }
+        #anima div:nth-child(1){
+            /*Em CSS, a propriedade animation-name define o nome da animação que será usada em um elemento. Esse nome precisa ser o mesmo de uma animação criada com @keyframes.*/
+            animation-name: anda;
+            /*A propriedade animation-duration em CSS define quanto tempo uma animação vai durar do começo ao fim*/
+            animation-duration: 2s;
+            /*A propriedade animation-iteration-count em CSS define quantas vezes uma animação deve ser repetida.
+            Se você colocar um número (ex: 3), a animação vai rodar 3 vezes.
+            Se usar infinite, a animação vai rodar para sempre.*/
+            animation-iteration-count: infinite;
+            /*A propriedade animation-timing-function em CSS define como a velocidade de uma animação muda ao longo do tempo — se é mais rápida no começo, no final ou uniforme.
+            Os valores mais comuns são:
+            linear: velocidade constante do início ao fim;
+            ease: começa devagar, acelera e termina devagar (padrão);
+            ease-in: começa devagar e acelera;
+            ease-out: começa rápido e desacelera no final;
+            ease-in-out: começa e termina devagar.
+
+            Também é possível criar funções personalizadas usando cubic-bezier(x1, y1, x2, y2) para um controle mais preciso da animação.
+            site para fazer o cubic-bezier -> https://cubic-bezier.com/#.17,.67,.65,.27*/
+            animation-timing-function: linear;
+            /*A propriedade animation-direction em CSS define em que direção a animação vai ser executada.
+            Ela pode ter valores como:
+            normal → a animação vai do início ao fim (padrão).
+            reverse → a animação vai do fim para o início.
+            alternate → a animação vai do início ao fim, depois do fim ao início, alternando.
+            alternate-reverse → começa do fim ao início, depois do início ao fim, alternando.*/
+            animation-direction: alternate;
+        }
+        #anima div:nth-child(2){
+            /* animation: name duration timing-function delay iteration-count direction fill-mode; */
+            animation: anda 2s linear 2s 3 alternate both running;
+            /*A propriedade animation-fill-mode em CSS define como os estilos aplicados por uma animação vão se comportar antes e/ou depois dela rodar.
+            Ela pode ter os valores:
+            none (padrão): o elemento volta ao estilo original depois da animação.
+            forwards: mantém o estilo do fim da animação.
+            backwards: aplica o estilo do início da animação enquanto ela ainda não começou (durante o delay, por exemplo).
+            both: combina forwards e backwards — mantém os estilos tanto no início (durante delay) quanto no final da animação.*/
+            animation-fill-mode: both;
+            /*A propriedade animation-play-state em CSS controla se uma animação está rodando ou pausada.
+            running: a animação acontece normalmente.
+            paused: a animação é pausada no quadro atual.*/
+            animation-play-state: running;
+        }
+        #anima div:nth-child(2):hover{
+            animation-play-state: paused;
+        }
+        #anima div:nth-child(3){
+            animation: anda 2s cubic-bezier(.39,-0.44,.73,1.44) 0ms infinite alternate,
+                    altura 2s linear 1 normal forwards;
+                    /*
+                    O will-change é uma propriedade em CSS usada para indicar ao navegador que um determinado elemento pode passar por mudanças específicas no futuro, como transformações ou animações. Ao usar essa propriedade, você avisa ao navegador sobre as alterações que serão feitas, permitindo que ele otimize o desempenho, pré-renderizando as partes do elemento que podem mudar. 
+                    O will-change prepara o navegador para animar a altura do elemento, ajudando a melhorar o desempenho.*/
+                    will-change: height;
+        }
+        #anima div:nth-child(4){
+            animation: largura 5s;
+            /*jump-end pula o último step ou passo*/
+            animation-timing-function: steps(5, jump-end);
+        }
+        #anima div:nth-child(5){
+            animation: largura 5s;
+            /*jump-start pula o primeiro step ou passo*/
+            animation-timing-function: steps(5, jump-start);
+        }
+        #anima div:nth-child(6){
+            animation: largura 5s;
+            /*jump-none não vai ter salto no começo e nem no final*/
+            animation-timing-function: steps(5, jump-none);
+        }
+        #anima div:nth-child(7){
+            animation: largura 5s;
+            /*jump-both pula o primeiro e o último step ou passo*/
+            animation-timing-function: steps(5, jump-both);
+        }
+    </style>
+</head>
+<body>
+    <div id="anima">
+        <div>1</div>
+        <div>2</div>
+        <div>3</div>
+        <div>jump-end</div>
+        <div>jump-start</div>
+        <div>jump-none</div>
+        <div>jump-both</div>
+    </div>
+</body>
+</html>

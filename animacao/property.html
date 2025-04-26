@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        :root{
+            /* --angle:0deg; */
+            --bg-color:blue;
+        }
+        /*Em CSS, @property é uma regra que permite definir propriedades customizadas (variáveis) de forma que elas possam ser animadas ou transicionar de um valor para outro de maneira mais controlada.
+        Sem o @property, as variáveis CSS (--minha-variavel) existem, mas o navegador não sabe que tipo de valor elas guardam (cor, número, ângulo, etc.), e por isso não consegue animá-las direito.
+        Com @property, você registra essa variável dizendo, por exemplo, "essa variável é um número" — aí o CSS pode animar ou fazer transições de valores dela suavemente!
+
+        syntax: '<angle>' diz que a variável será um valor de ângulo.
+        inherits: true faz com que os elementos filhos (como <p>, <span>, etc) herdem automaticamente o valor de --angle que foi definido em um elemento pai.
+        initial-value: 0deg define o valor inicial.*/
+        @property --angle{
+            syntax: "<angle>";
+            inherits: true;
+            initial-value: 0deg;
+        }
+        body{
+            background-color: rgb(3,0,11);
+            color: white;
+        }
+        .anima{
+            width: 200px;
+            height: 200px;
+            transform: rotate(var(--angle));
+            animation: rotateAnimate 2s linear infinite;
+            background-color: var(--bg-color);
+        }
+        @keyframes rotateAnimate{
+            to{
+                --angle: 360deg;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="anima">Anima</div>
+</body>
+</html>

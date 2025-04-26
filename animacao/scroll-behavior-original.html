@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        html{
+            /*O scroll-behavior no CSS serve para controlar como a rolagem da página acontece — se ela será suave (animada) ou instantânea (rápida e direta).
+            Por exemplo:
+            Se você clicar em um link que leva a uma parte mais abaixo da mesma página, normalmente o navegador "pula" direto para o destino.
+            Mas com scroll-behavior: smooth, ele rola suavemente até o loca.
+            Valores possíveis:
+            auto: comportamento padrão (sem animação, vai direto).
+            smooth: rolagem suave (com animação).*/
+            scroll-behavior: smooth;
+        }
+        body {
+            margin: 0;
+        }
+
+        a {
+            display: inline-block;
+            margin: 1em;
+            text-decoration: none;
+        }
+
+        nav {
+            padding: 5px;
+            border: 1px solid black;
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            text-align: right;
+            background: #ccc5;
+
+            /*O backdrop-filter em CSS é usado para aplicar efeitos gráficos (como desfoque, brilho, contraste, entre outros) ao que está por trás de um elemento — ou seja, no fundo que ele "deixa ver".
+            É como se você colocasse um vidro fosco em cima de uma imagem: você ainda vê a imagem atrás, mas com um efeito diferente (mais embaçado, mais claro, etc.).
+
+            Principais valores que você pode usar no backdrop-filter:
+            blur(px): desfoque
+            brightness(%): brilho
+            contrast(%): contraste
+            grayscale(%): escala de cinza
+            sepia(%): tom sépia
+            saturate(%): saturação
+            invert(%): inverte as cores
+            Combinações de vários efeitos também são possíveis!
+
+            Site sobre backdrop-filter: https://developer.mozilla.org/en-US/docs/Web/CSS/backdrop-filter*/
+            backdrop-filter: blur(10px);
+        }
+
+        .scroll-page {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            font-size: 5em;
+        }
+        @media (prefers-reduced-motion){
+            .scroll-page{
+                background-color: bisque;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="#home">Home</a>
+        <a href="#projetos">Projetos</a>
+        <a href="#contatos">Contatos</a>
+    </nav>
+
+    <div class="scroll-page" id="home">
+        <h1>Página Inicial</h1>
+    </div>
+    <div class="scroll-page" id="projetos">
+        <h2>Projetos</h2>
+    </div>
+    <div class="scroll-page" id="contatos">
+        <h2>Contatos</h2>
+    </div>
+
+</body>
+
+</html>
