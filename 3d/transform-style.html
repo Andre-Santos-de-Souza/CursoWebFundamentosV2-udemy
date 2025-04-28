@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3D preserve 3D</title>
+    <style>
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            aspect-ratio: 1;
+            margin: 60px;
+        }
+        .plano{
+            background-color: rgb(0 0 0 / .3);
+            width: 200px;
+            aspect-ratio: 1;
+        }
+        #cena1{
+            perspective: 500px;
+        }
+        .cena1a{
+            /*No transform a ordem importa, se você colocar o rotate em primeiro e o translate em segundo, vai ter um resultado, se você trocar as posições de rotate em segundo e translate em primeiro, vai ter outro resultado.*/
+            transform: rotateY(45deg) translateX(200px);
+            /*O transform-style é uma propriedade CSS que controla como os elementos filhos de um elemento transformado em 3D devem ser renderizados.
+            Ela tem dois valores principais:
+
+            flat (padrão): Faz com que todos os filhos sejam achatados no mesmo plano do elemento pai, ignorando transformações 3D individuais que eles possam ter.
+
+            preserve-3d: Faz com que os filhos mantenham suas transformações 3D próprias, criando um efeito de profundidade mais realista.*/
+            transform-style: preserve-3d;
+        }
+        .cena1b{
+            transform: rotateX(55deg);
+            transform: rotateX(35deg) translateZ(50px) scale3d(2,1.5,1.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="cena" id="cena1">
+        <div class="cena1a plano">
+            <div class="cena1b plano">cena 1 B</div>
+        </div>
+    </div>
+</body>
+</html>

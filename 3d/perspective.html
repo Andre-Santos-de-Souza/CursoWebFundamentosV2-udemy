@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-family: sans-serif;
+            margin-bottom: 100vh;
+        }
+        .cena{
+            border: 2px solid #ccc;
+            width: 300px;
+            aspect-ratio: 1;
+            margin: 80px;
+        }
+        .plano{
+            background-color: red;
+        }
+        #cena1{
+            /*O perspective em CSS é usado para criar um efeito de profundidade 3D nos elementos que passam por transformações (transform) como rotações (rotateX, rotateY, etc).
+
+            Ele basicamente define quão "profunda" ou "realista" vai parecer a transformação 3D.
+            É como se você estivesse dizendo ao navegador:
+            "Olha, a câmera está a X pixels de distância do elemento."
+            Quanto menor o valor, mais dramático é o efeito 3D. Quanto maior o valor, mais sutil.*/
+            perspective: 600px;
+        }
+        #cena1 .plano{
+            width: 200px;
+            margin: 50px;
+            aspect-ratio: 1;
+            transform: rotateY(25deg);
+        }
+
+        #cena2 .plano{
+            width: 200px;
+            margin: 50px;
+            aspect-ratio: 1;
+            /*O perspective() dentro do transform no CSS é usado para criar um efeito de profundidade 3D nos elementos.
+            Em termos simples: ele faz com que transformações como rotateX(), rotateY(), e translateZ() pareçam que estão se afastando ou se aproximando do observador, criando uma sensação de perspectiva, como se você estivesse olhando para um objeto real em 3D.
+            👉 Quanto menor for o valor da perspectiva, mais próximo o objeto parece estar do observador — e isso gera um efeito mais exagerado de profundidade.
+            👉 Quanto maior for o valor da perspectiva, mais longe o objeto parece estar do observador — e o efeito 3D fica mais suave.*/
+            transform: perspective(600px) rotateY(25deg);
+        }
+        #cena3, #cena4{
+            display: grid;
+            grid-template-columns: repeat(3,1fr);
+        }
+        #cena3 .plano, #cena4 .plano{
+            margin: 1rem;
+        }
+        #cena3{
+            perspective: 600px;
+            /*A propriedade CSS perspective-origin serve para definir o ponto de origem da perspectiva para um elemento 3D. Em termos mais simples, ela determina de qual ponto o espectador está olhando para o elemento tridimensional.
+
+            Imagine que você está olhando para um objeto 3D. A forma como você o percebe (a perspectiva) muda dependendo da posição dos seus olhos. O perspective-origin no CSS é como definir a posição dos seus olhos em relação a esse objeto 3D.*/
+            perspective-origin: bottom left;
+        }
+        #cena3 .plano{
+            transform: rotateY(45deg);
+            
+        }
+        #cena4 .plano{
+            transform: perspective(600px) rotateY(45deg);
+            /*backface-visibility é uma propriedade do CSS que controla se a parte traseira de um elemento deve ficar visível quando ele é girado no espaço 3D.
+            
+            Quando você aplica uma rotação (transform: rotateY(180deg)), o elemento vira de costas. O backface-visibility diz se essas "costas" devem aparecer ou não.
+            backface-visibility: visible; → A parte de trás é visível (padrão).
+            backface-visibility: hidden; → A parte de trás é escondida (fica invisível quando girado).*/
+            backface-visibility: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="cena" id="cena1">
+        <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena2">
+        <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena3">
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+    </div>
+
+    <div class="cena" id="cena4">
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+        <div class="plano">plano</div>
+    </div>
+</body>
+</html>

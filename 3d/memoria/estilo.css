@@ -1,0 +1,112 @@
+body{
+    min-height: 100vh;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: radial-gradient(#3f5efb, #aa46fb);
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+}
+h1{
+    font-weight: 100;
+    text-align: center;
+    font-size: 2.5rem;
+}
+main{
+    background-color: white;
+    width: 620px;
+    padding: 2rem;
+    box-sizing: border-box;
+    box-shadow: 0px 15px 20px -10px rgb(0 0 0 / .6);
+}
+.game{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 90px);
+    gap: 1rem;
+    perspective: 500px;
+}
+.card{
+    position: relative;
+    border: 2px solid red;
+    border-radius: 6px;
+    transform-style: preserve-3d;
+    transition: transform 1.5s;
+    box-shadow: 0px 5px 7px -5px rgb(0 0 0 / .5);
+}
+.card img{
+    max-width: 100%;
+    position: absolute;
+    overflow: hidden;
+
+    /*O object-fit em CSS é uma propriedade usada para definir como o conteúdo de um elemento <img>, <video>, ou <iframe> (ou qualquer outro elemento substituível) deve se ajustar ao seu contêiner.
+    Em outras palavras: ele controla como a imagem ou vídeo será redimensionado para preencher ou se encaixar dentro da caixa definida pelo CSS (como width e height), sem precisar cortar ou distorcer (ou cortando, se você quiser).
+    Principais valores de object-fit:
+
+    fill:	(padrão) Estica o conteúdo para preencher completamente o contêiner, pode distorcer a imagem.
+    contain:	Redimensiona o conteúdo para caber inteiramente no contêiner, mantendo a proporção. Pode sobrar espaço vazio.
+    cover:	Redimensiona o conteúdo para cobrir todo o contêiner. Pode cortar partes da imagem para manter a proporção.
+    none:	Não faz nenhum ajuste. Usa o tamanho original da imagem/vídeo.
+    scale-down:	Faz o mesmo que none ou contain, o que for menor.*/
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    border-radius: 6px;
+    backface-visibility: hidden;
+}
+.card-front{
+    transform: rotateY(180deg);
+}
+
+main:has(#check1:checked) .game .card1,
+main:has(#check2:checked) .game .card2,
+main:has(#check3:checked) .game .card3,
+main:has(#check4:checked) .game .card4,
+main:has(#check5:checked) .game .card5,
+main:has(#check6:checked) .game .card6,
+main:has(#check7:checked) .game .card7,
+main:has(#check8:checked) .game .card8,
+main:has(#check9:checked) .game .card9,
+main:has(#check10:checked) .game .card10,
+main:has(#check11:checked) .game .card11,
+main:has(#check12:checked) .game .card12,
+main:has(#check13:checked) .game .card13,
+main:has(#check14:checked) .game .card14,
+main:has(#check15:checked) .game .card15,
+main:has(#check16:checked) .game .card16{
+    transform: rotateY(180deg);
+}
+
+/*O :focus-visible em CSS é um pseudo-classe que serve para estilizar um elemento somente quando ele recebe foco e é considerado "visivelmente focado" — ou seja, quando o navegador entende que o foco deve ser mostrado ao usuário (geralmente por teclado, não por clique do mouse).*/
+main:has(#check1:focus-visible) .game .card1,
+main:has(#check2:focus-visible) .game .card2,
+main:has(#check3:focus-visible) .game .card3,
+main:has(#check4:focus-visible) .game .card4,
+main:has(#check5:focus-visible) .game .card5,
+main:has(#check6:focus-visible) .game .card6,
+main:has(#check7:focus-visible) .game .card7,
+main:has(#check8:focus-visible) .game .card8,
+main:has(#check9:focus-visible) .game .card9,
+main:has(#check10:focus-visible) .game .card10,
+main:has(#check11:focus-visible) .game .card11,
+main:has(#check12:focus-visible) .game .card12,
+main:has(#check13:focus-visible) .game .card13,
+main:has(#check14:focus-visible) .game .card14,
+main:has(#check15:focus-visible) .game .card15,
+main:has(#check16:focus-visible) .game .card16{
+    outline: 2px solid red;
+    transform: rotateY(180deg);
+}
+.controls{
+    /* display: none; MATA A ACESSIBILIDADE*/
+    position: absolute;
+    /*No CSS, a propriedade clip é usada para recortar uma área específica de um elemento, mostrando apenas a parte selecionada e ocultando o resto.
+    Porém, clip só funciona com elementos que têm position: absolute ou position: fixed.
+    A propriedade clip é considerada obsoleta (deprecated) em favor da propriedade clip-path, que é mais poderosa e flexível.
+    Hoje em dia usamos mais clip-path para fazer recortes não só retangulares, mas também circulares, poligonais, etc.*/
+    clip: rect(1px, 1px, 1px, 1px);
+    height: 1px;
+    height: 1px;
+    overflow: hidden;
+}
